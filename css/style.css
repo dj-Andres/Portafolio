@@ -5,7 +5,7 @@
 }
 html{
     font-size: 10px;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Sansita Swashed', cursive;
     color: #eee;
 }
 body{
@@ -103,7 +103,7 @@ li{
     margin: 0 2rem;
 }
 .nav-link{
-    font-family: 'The Historia Deno',sans-serif;
+    font-family: 'Sansita Swashed', cursive;
     font-size: 5rem;
     padding: 1rem;
 }
@@ -227,6 +227,9 @@ li{
 }
 .fa-linkedin:hover{
     color: #2150ebe8;
+}
+.fa-instagram:hover{
+    color: #fd57bf;
 }
 /*services*/
 .my-skills{
