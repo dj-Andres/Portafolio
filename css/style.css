@@ -288,6 +288,7 @@ li{
     font-size: 3rem;
     font-weight: 300;
     margin: 1rem 0;
+    opacity: 0.3;
 }
 .portfolio-description h6{
     font-size: 1.5rem;
