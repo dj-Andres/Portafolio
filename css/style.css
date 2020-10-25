@@ -307,27 +307,7 @@ li{
 .portfolio-description .cta:hover{
     color: #2f67cd;
 }
-.portafolio-form{
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
-    width: 70%;
-    height: 40px;
-    line-height: 40px;
-    padding: 0 20px;
-    border-radius: 100px;
-    border: none;
-}
-.portafolio-categorias{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.portafolio-categorias a{
-    margin:10px 20px;
-    font-size: 18px;
-    font-weight: 700;
-}
+
 /*time line*/
 .timeline ul{
     border-left: 4px solid #ffe838;

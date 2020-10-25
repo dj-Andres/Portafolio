@@ -1,76 +1,207 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diego Jimenez</title>
     <link rel="stylesheet" href="css/aos.min.css">
     <link rel="stylesheet" href="css/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!--<link rel="stylesheet" href="css/style.css">-->
     <link rel="shortcut icon" href="img/LogoSample_ByTailorBrands.jpg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@200&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f3f3f3;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .contenedor {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* ------------------------- */
+        /* HEADER */
+        /* ------------------------- */
+
+        header {
+            padding: 40px 0;
+        }
+
+        header .logo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header .logo p {
+            color: #9B9B9B;
+        }
+
+        header form {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        header .barra-busqueda {
+            width: 70%;
+            height: 40px;
+            line-height: 40px;
+            background: #fff;
+            padding: 0 20px;
+            border-radius: 100px;
+            border: none;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        header .categorias {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        header .categorias a {
+            color: #9B9B9B;
+            margin: 10px 20px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        header .categorias a.activo {
+            color: #000;
+        }
+
+        /* ------------------------- */
+        /* Grid */
+        /* ------------------------- */
+
+        .grid {
+            position: relative;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s linear 1s;
+        }
+        .grid.imagenes-cargadas{
+            opacity: 1;
+        }
+        .grid .item {
+            position: absolute;
+            display: block;
+            padding: 0;
+            margin: 10px;
+            width: calc(33.333333% - 20px);
+        }
+        .grid .item-contenido{
+            position: relative;
+        }
+        .grid .item img {
+            width: 100%;
+            cursor: pointer;
+            vertical-align: top;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <div class="menu-toggler">
-            <div class="bar half start"></div>
-            <div class="bar"></div>
-            <div class="bar half end"></div>
-        </div>
-        <nav class="top-nav">
-            <ul class="nav-list">
-                <li>
-                    <a href="index.html" class="nav-link">Inicio</a>
-                </li>
-                <li>
-                    <a href="#about" class="nav-link">Sobre mi</a>
-                </li>
-                <li>
-                    <a href="#services" class="nav-link">Servicios</a>
-                </li>
-                <li>
-                    <a href="#experiencie" class="nav-link">Experiencia</a>
-                </li>
-                <li>
-                    <a href="#contact" class="nav-link">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="landig-text">
-            <h1>Diego Jimenez</h1>
-            <h6>Tecnólogo en Análisis de Sistemas</h6>
-        </div>    
-    </header>
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-heading">
-                <h1>Portafolio</h1>
-                <h6>Ver mis trabajos realizados</h6>
+    <div class="contenedor">
+        <header>
+            <div class="logo">
+                <h1>Carlos Arturo</h1>
+                <p>Desarrollador Web</p>
             </div>
-            <div class="portfolio-item">
-                <div class="portafolio-form">
-                    <form action="">
-                        <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
-                    </form>
-                    <div class="portafolio-categorias" id="categorias">
-                        <a href="#" class="activo">Todos</a>
-                        <a href="#">Diseño Web</a>
-                        <a href="#">Desarrollo Web</a>
-                    </div>
+            <form action="">
+                <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
+            </form>
+            <div class="categorias" id="categorias">
+                <a href="#" class="activo">Todos</a>
+                <a href="#">Naturaleza</a>
+                <a href="#">Ciudades</a>
+                <a href="#">Personas</a>
+                <a href="#">Animales</a>
+            </div>
+        </header>
+        <section class="grid" id="grid">
+            <div class="item" 
+                data-categoria="ciudades" 
+                data-etiquetas="ciudades autos carros calles" 
+                data-descripcion="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, qui repellendus. Magnam!">
+                <div class="item-contenido">
+                    <img src="img/ciudad1.png" alt="" srcset="">
                 </div>
             </div>
-        </div>
-    </section>
-    <footer class="copyrigth">
-        <div class="up" id="up">
-            <i class="fas fa-chevron-up"></i>
-        </div>
-        <p>&copy; 2020 Diego Jimenez</p>
-    </footer>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/aos.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/funcions.js"></script>
+            <div class="item" 
+                data-categoria="personas" 
+                data-etiquetas="personas" 
+                data-descripcion="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, qui repellendus. Magnam!">
+                <div class="item-contenido">
+                    <img src="img/persona1.png" alt="" srcset="">
+                </div>
+            </div>
+            <div class="item" 
+                data-categoria="naturaleza" 
+                data-etiquetas="naturaleza" 
+                data-descripcion="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, qui repellendus. Magnam!">
+                <div class="item-contenido">
+                    <img src="img/naturaleza1.png" alt="" srcset="">
+                </div>
+            </div>
+            <div class="item" 
+                data-categoria="animales" 
+                data-etiquetas="animales" 
+                data-descripcion="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, qui repellendus. Magnam!">
+                <div class="item-contenido">
+                    <img src="img/animal1.png" alt="" srcset="">
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/muuri.min.js"></script>
+    <script src="js/web-animations.min.js"></script>
+    <script>
+        const grid = new Muuri('.grid',{
+            layout: {
+                rounding: false
+            }
+        });
+
+        window.addEventListener('load',()=>{
+            grid.refreshItems().layout;
+            document.getElementById('grid').classList.add('imagenes-cargadas');
+
+            const enlaces=document.querySelectorAll('.categorias a');
+
+                enlaces.forEach((elemento) => {
+                    elemento.addEventListener('click',(e)=>{
+                        e.preventDefault();
+                        enlaces.forEach((enlace)=>enlace.classList.remove('activo'));
+                        e.target.classList.add('activo');
+
+                        const categoria = e.target.innerHTML.toLowerCase();
+                        grid.filter(`[data-categoria="${categoria}"]`);
+                    })
+                });
+        });
+    </script>
+    <!--<script src="js/jquery.min.js"></script>
+    <script src="js/aos.min.js"></script>-->
+    
+
+    <!--<script src="js/main.js"></script>-->
+    <!--<script src="js/funcions.js"></script>-->
 </body>
+
 </html>
